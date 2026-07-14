@@ -65,10 +65,10 @@ def start():
     output.disable_custom_widget_manager()
 
     # Preprocess the save file, ideas.txt, and GPT-2
-    cfg, ideas_line, gpt2_pipe, base_path = preprocess.run()
+    cfg, ideas_line, base_path = preprocess.run()
 
     # Initialize the UI
-    colab_ui = UIWrapper(cfg, ideas_line, gpt2_pipe, base_path)
+    colab_ui = UIWrapper(cfg, ideas_line, base_path)
 
     # Display (first)
     clear_output()
