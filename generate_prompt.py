@@ -3,7 +3,7 @@ import random
 import re
 
 # Prompt wildcard function
-def generate(starting_text, ideas_line, gpt2_pipe):
+def generate(starting_text, ideas_line):
     if gpt2_pipe:
         # Set seed
         random_seed_for_gpt2 = random.randint(100, 1000000)
