@@ -51,13 +51,6 @@ def start():
     from StableDiffusionXLColabUI.utils import preprocess
     from StableDiffusionXLColabUI.UI.ui_wrapper import UIWrapper
 
-    # Import the widget manager (if exist)
-    try:
-        from google.colab import output
-    except Exception as e:
-        print("It seems like the output module from Google Colab doesn't exist. Are you using this repository somewhere else?\nAborting custom widget manager...")
-        output = OutputSubstitute()
-
     # Setting the environment
     os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
 
